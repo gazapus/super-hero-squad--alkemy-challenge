@@ -1,4 +1,4 @@
-import './LoadingPage.css';
+import '../styles/LoadingPage.css';
 import Shield from '../images/shield.png'
 import React from 'react';
 
@@ -9,7 +9,7 @@ function LoadingPage({loaded = false}) {
         if(loaded) {
             setTimeout(() => {
                 setHiden(true);
-            }, 1400);   // cierra la vista de carga en 1.5 seg.
+            }, 1000);   // cierra la vista de carga en 1.5 seg.
         } else {
             setHiden(false);
         }
@@ -19,9 +19,9 @@ function LoadingPage({loaded = false}) {
     
     return (
         <div className={`loadingPage ${loaded ? 'closing' : ''}`}>
-            <div className="loader">
+            <div className="loader d-flex flex-column align-items-center">
                 <img src={Shield} className="loader__image" alt="" />
-                <p className="loader__text">Cargando</p>
+                <p className="loader__text m-0">Cargando</p>
             </div>
         </div>
     )
