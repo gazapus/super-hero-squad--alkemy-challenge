@@ -1,0 +1,38 @@
+.footer {
+    background-color: #00040c;
+    position: absolute;
+    top: 100vh;
+}
+
+.footer__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+.footer__description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
+    letter-spacing: 0.7pt;
+}
+
+.footer__description a {
+    text-decoration-color: white;
+    color: white;
+}
+
+.footer__description a:hover {
+    text-decoration-color: white;
+    color: white;
+    font-weight: bold;
+}
+
+.footer__data {
+    font-size: 0.8em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .footer__br {
+        display: none;
+    }
+}
