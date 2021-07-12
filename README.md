@@ -1,8 +1,8 @@
 ## React Challenge
 
 # Páginas:
-- carga
-- Home
+- carga /
+- Home /
 - Login
 - Mi equipo
 - Buscador + catalogo
