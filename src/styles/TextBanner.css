@@ -1,0 +1,77 @@
+.textBanner {
+    font-family: 'Fugaz One', cursive;
+    color: yellow;
+    font-size: 6em;
+    -webkit-text-stroke: 4pt rgb(255, 0, 0);
+    user-select: none;
+    text-transform: uppercase;
+}
+
+.textBanner-sm {
+    font-size: 2em;
+    -webkit-text-stroke: 1.5pt rgb(255, 0, 0);
+}
+
+.textBanner-md {
+    font-size: 4em;
+    -webkit-text-stroke: 3pt rgb(255, 0, 0);
+}
+
+.textBanner-lg {
+    font-size: 6em;
+    -webkit-text-stroke: 4pt rgb(255, 0, 0);
+}
+
+.textBanner-neon {
+    animation: neon 8s infinite;
+    animation-timing-function: linear;
+}
+
+@media (max-width: 768px) {
+    .textBanner-sm {
+        font-size: 1em;
+        -webkit-text-stroke: 0.5pt rgb(255, 0, 0);
+    }
+    .textBanner-md {
+        font-size: 2em;
+        -webkit-text-stroke: 1pt rgb(255, 0, 0);
+    }
+    .textBanner-lg {
+        font-size: 3em;
+        -webkit-text-stroke: 2pt rgb(255, 0, 0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .textBanner-sm {
+        font-size: 2em;
+        -webkit-text-stroke: 1pt rgb(255, 0, 0);
+    }
+    .textBanner-md {
+        font-size: 3em;
+        -webkit-text-stroke: 2pt rgb(255, 0, 0);
+    }
+    .textBanner-lg {
+        font-size: 4em;
+        -webkit-text-stroke: 3pt rgb(255, 0, 0);
+    }
+}
+
+
+@keyframes neon {
+    0% {
+        text-shadow: 1px 1px 4px red, -1px -1px 4px red, 1px -1px 4px red, -1px 1px 4px red, 0 0 20px rgba(255, 0, 0, 0.6);
+    }
+    25% {
+        text-shadow: 1px 1px 4px red, -1px -1px 4px red, 1px -1px 4px red, -1px 1px 4px red, 0 0 30px rgba(0, 255, 13, 0.6);
+    }
+    50% {
+        text-shadow: 1px 1px 4px red, -1px -1px 4px red, 1px -1px 4px red, -1px 1px 4px red, 0 0 20px rgba(0, 81, 255, 0.6);
+    }
+    75% {
+        text-shadow: 1px 1px 4px red, -1px -1px 4px red, 1px -1px 4px red, -1px 1px 4px red, 0 0 30px rgba(192, 63, 252, 0.6);
+    }
+    100% {
+        text-shadow: 1px 1px 4px red, -1px -1px 4px red, 1px -1px 4px red, -1px 1px 4px red, 0 0 20px rgba(255, 0, 0, 0.6);
+    }
+}
