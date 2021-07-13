@@ -1,0 +1,21 @@
+.login {
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.homeBackground__base {
+    background-color: #030014;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -101;
+}
