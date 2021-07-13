@@ -8,6 +8,7 @@ import TextBanner from '../components/TextBanner';
 import Footer from '../components/Footer';
 import HomeBackground from '../components/HomeBackground';
 import FormLogin from '../components/FormLogin';
+import alertar from '../components/Alert';
 
 function Login() {
     const [loading, setLoading] = React.useState(false);
@@ -22,7 +23,9 @@ function Login() {
         setLoading(true);
         let error = await AuthService.signin(values.email, values.password, values.keepLogged);
         setLoading(false);
-        if (!error) {
+        if (error) {
+            alertar("ERROR: Usuario o contraseña no válido", "danger");
+        } else {
             history.push(pathnames.home);
         }
     }

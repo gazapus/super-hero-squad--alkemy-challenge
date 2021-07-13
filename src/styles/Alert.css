@@ -1,0 +1,44 @@
+._alert {
+    background-color: rgba(139, 137, 255, 0.98);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(17, 17, 17);
+    box-shadow: 1px 1px 5px rgb(63, 97, 252);
+    border-style: solid;
+    border-width: 3pt;
+    border-color: rgb(17,17,17);
+    border-radius: 5pt;
+    animation-name: rebote;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+._alert-danger {
+    background-color: rgba(204, 31, 31, 0.98);
+    border-color: rgb(39, 0, 0);
+    box-shadow: 1px 1px 5px rgb(255, 151, 15);
+    color: rgb(5,5,5);
+}
+
+._alert-success {
+    background-color: rgba(102, 207, 102, 0.98);
+    border-color: rgb(3, 29, 0);
+    box-shadow: 1px 1px 5px rgb(113, 255, 78);
+}
+
+@keyframes rebote {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

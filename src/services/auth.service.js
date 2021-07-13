@@ -11,7 +11,6 @@ async function signin(email, password, keepLogged) {
             return false;
         })
         .catch((error) => {
-            alert(error.response.data.error)
             return true;
         });
 };
