@@ -36,3 +36,8 @@
         font-size: 1.3em;
     }
 }
+
+.main__button:disabled {
+    color: white;
+    cursor: wait;
+}

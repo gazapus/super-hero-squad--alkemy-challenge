@@ -3,7 +3,8 @@
 # Páginas:
 - carga /
 - Home /
-- Login
+- Login /
 - Mi equipo
 - Buscador + catalogo
 - Detalle del miembro
+- Página no encontrada

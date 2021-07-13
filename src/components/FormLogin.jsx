@@ -70,7 +70,7 @@ function FormLogin({ handleSubmit, loading = false }) {
                     </div>
 
                     <div className="d-flex justify-content-center">
-                        <Button type="submit">Entrar</Button>
+                        <Button type="submit" disabled={loading}>Entrar</Button>
                     </div>
                     <div className="text-center mt-2" style={{height: "2em"}}>
                         {loading ?
