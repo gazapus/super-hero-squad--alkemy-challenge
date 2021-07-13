@@ -1,6 +1,9 @@
 import './Home.css'
+import pathnames from '../utils/pathnames';
+import {Link} from 'react-router-dom';
 import LoadingPage from '../components/LoadingPage';
 import Button from '../components/Button';
+import TextBanner from '../components/TextBanner';
 import Footer from '../components/Footer';
 import HomeBackground from '../components/HomeBackground';
 import React, { useState } from 'react';
@@ -15,16 +18,18 @@ function Home() {
     }, [])
 
     return (
-        <div className="container-fluid home p-0">
+        <div className="container-fluid p-0">
             <LoadingPage loaded={loadFinished} />
             <HomeBackground />
-            <div className="home__main d-flex flex-column w-100 justify-content-center align-items-center">
-                <h1 className="home__title text-center p-1">SUPER HERO SQUAD</h1>
+            <div className="home d-flex flex-column w-100 justify-content-center align-items-center">
+                <TextBanner size="lg" neonEffect>SUPER HERO SQUAD</TextBanner>
                 <div className="mt-5 mb-3">
-                    <Button handleClick={() => console.log("nada")} >ACCEDER</Button>
+                    <Link to={pathnames.login}>
+                        <Button>ACCEDER</Button>
+                    </Link>
                 </div>
             </div>
-            <Footer visible={loadFinished} /> 
+            <Footer visible={loadFinished} />
         </div>
     )
 }

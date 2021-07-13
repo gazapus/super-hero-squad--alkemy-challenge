@@ -1,9 +1,15 @@
-
-.homeBackground {
+.homeBackgroundContainer {
+    min-height: 100vh;
+    background-image: linear-gradient(#020B1D, #160030, #020B1D);
     overflow-x: hidden;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -100;
+}
+
+.homeBackground {
+    overflow-x: hidden;
     min-height: 100vh;
 }
 
@@ -32,13 +38,13 @@
         transform: translateX(0);
     }
     to {
-        transform: translateX(100vw);
+        transform: translateX(100%);
     }
 }
 
 @keyframes carousel2 {
     from {
-        transform: translateX(-100vw);
+        transform: translateX(-100%);
     }
     to {
         transform: translateX(0vw);

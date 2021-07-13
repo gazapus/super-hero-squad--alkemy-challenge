@@ -1,6 +1,6 @@
 import '../styles/Button.css';
 
-function Button({ handleClick, children }) {
+function Button({ handleClick = () => {}, children }) {
     return (
         <button className="main__button" onClick={handleClick}>{children}</button>
     )
