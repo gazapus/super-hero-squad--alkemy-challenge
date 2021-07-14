@@ -9,4 +9,20 @@ body {
   box-sizing: border-box;
 }
 
-/* GLOBAL CLASSES */
+
+::-webkit-scrollbar {
+  width: 9pt;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(20, 20, 20);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(110, 110, 110);
+  border-radius: 10pt;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(150, 150, 150);
+}

@@ -15,7 +15,7 @@ function TextBanner({ children, size = "md", neonEffect = false }) {
 
     return (
         <h1
-            className={`textBanner text-center p-1 ${classSize} ${neonEffect ? "textBanner-neon": ""}`}
+            className={`textBanner text-center p-1 m-0 ${classSize} ${neonEffect ? "textBanner-neon": ""}`}
         >
             {children}
         </h1>
