@@ -20,9 +20,16 @@ function getToken() {
     return JSON.parse(sessionToken);
 };
 
+function logout() {
+    sessionStorage.removeItem("token");
+    localStorage.removeItem("token");
+    return true;
+}
+
 let methods = {
     signin,
-    getToken
+    getToken,
+    logout
 };
 
 export default methods;
