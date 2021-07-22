@@ -1,0 +1,41 @@
+.searcherForm {
+    height: 4em;
+}
+
+.searcherForm__input {
+    border-width: 2.5pt;
+    border-style: solid;
+    border-color: rgb(255, 217, 0);
+    border-radius: 15pt 0 0 15pt;
+    background-color: rgba(0, 0, 0, 0.856);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-indent: 0.5em;
+}
+
+.searcherForm__button {
+    border-radius: 0 15pt 15pt 0;
+    border-color: rgb(255, 217, 0);
+    border-style: solid;
+    border-width: 2.5pt;
+    background-color: rgb(172, 27, 27);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition-duration: 0.5s;
+}
+
+.searcherForm__input:focus, .searcherForm__button:focus {
+    box-shadow: 1px 1px 5px yellow;
+    outline: none;
+}
+
+.searcherForm__button:hover {
+    background-color: rgb(129, 11, 11);
+}
+
+@media (max-width: 764px) {
+    .searcherForm__button {
+        font-size: 0.8em;
+    }
+}
