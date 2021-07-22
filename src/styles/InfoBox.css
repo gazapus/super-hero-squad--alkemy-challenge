@@ -1,0 +1,20 @@
+.infoBox {
+    border-style: solid;
+    border-width: 3pt;
+    border-color: yellow;
+    padding: 0.5em;
+    color: yellow;
+    text-align: center;
+}
+
+.infoBox__name {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: 'Fugaz One', cursive;
+}
+
+.infoBox__state {
+    font-size: 2em;
+    font-family: 'Fugaz One', cursive;
+
+}

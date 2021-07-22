@@ -1,0 +1,49 @@
+.statusBar__bar {
+    height: 1em;
+    width: 100%;
+}
+
+.statusBar__bar-small {
+    height: 0.5em;
+}
+
+.statusBar__name {
+    text-transform: capitalize;
+    font-size: 0.9em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.statusBar__name-small {
+    font-size: 0.8em;
+}
+
+.statusBar__bar-line{
+    background-image: linear-gradient(to right, orange, rgb(255, 123, 0));
+    box-shadow: 1px 1px 5px rgba(255, 0, 0, 0.562), 0px 1px 5px rgba(255, 0, 0, 0.575);
+    border-radius: 40pt;
+    height: 100%;
+}
+
+.statusBar__bar-line-small {
+    background-image: linear-gradient(to right, orange, rgb(255, 123, 0));
+    box-shadow: 1px 1px 5px rgba(255, 0, 0, 0), 0px 1px 5px rgba(255, 0, 0,0);
+}
+
+.statusBar__bar-state{
+    font-size: 0.8em;
+    text-indent: 0.3em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.statusBar__bar-state-small {
+    font-size: 0.7em;
+}
+
+@media (max-width: 768px) {
+    .statusBar__bar {
+        height: 0.8em;
+    }
+    .statusBar__bar-small {
+        height: 0.4em;
+    }
+}
