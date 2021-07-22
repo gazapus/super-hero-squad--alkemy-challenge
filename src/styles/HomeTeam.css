@@ -1,6 +1,6 @@
 .homeTeam {
     background-image: linear-gradient(to left, #020B1D, #160030, #020B1D);
-    height: 100vh !important;
+    min-height: 100vh !important;
     position: relative;
 }
 
