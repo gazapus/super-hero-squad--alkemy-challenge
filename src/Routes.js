@@ -1,9 +1,9 @@
 import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import pathNames from './utils/pathnames';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import HomeTeam from './pages/HomeTeam';
+import Home from './views/Home';
+import Login from './views/Login';
+import HomeTeam from './views/HomeTeam';
 
 function Routes() {
     return (
