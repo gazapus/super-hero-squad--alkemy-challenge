@@ -1,7 +1,7 @@
 import '../styles/SearcherForm.css';
 import { useFormik } from 'formik';
 
-function Searcher({ handleSubmit = () => {}, loading = false }) {
+function Searcher({ handleSubmit = () => {}}) {
     const formik = useFormik({
         initialValues: {
             name: ''
@@ -11,7 +11,7 @@ function Searcher({ handleSubmit = () => {}, loading = false }) {
         },
         validate: values => {
             let errors = {};
-            if (values.name == "") errors.name = "Debe completar este campo";
+            if (values.name === "") errors.name = "Debe completar este campo";
             if (values.name.length > 30) errors.name = "Nombre muy largo";
             return errors;
         },

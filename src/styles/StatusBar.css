@@ -1,6 +1,8 @@
 .statusBar__bar {
     height: 1em;
     width: 100%;
+    border-radius: 40pt;
+    background-color: rgba(3, 0, 29, 0.5);
 }
 
 .statusBar__bar-small {

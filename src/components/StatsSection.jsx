@@ -19,33 +19,44 @@ function StatsSection({ team }) {
             ];
             for (let hero of team) {
                 for (let powerstat of powerstats) {
-                    powerstat.value += parseInt(hero.powerstats[powerstat.name]);
+                    if(!isNaN(hero.powerstats[powerstat.name]))
+                        powerstat.value += parseInt(hero.powerstats[powerstat.name]);
                 }
             }
             powerstats.sort((a, b) => b.value - a.value)
             setPowerstats(powerstats);
         }
 
-        function updateAverageHieght() {
+        function updateAverageHeight() {
             let totalHeight = 0;
+            let totalHeroes = 0;
             for (let hero of team) {
-                totalHeight += parseInt(hero.appearance.height[1].split(" ")[0]);
+                let heroHeight = parseInt(hero.appearance.height[1].split(" ")[0]);
+                if(!isNaN(heroHeight) && heroHeight > 0) {
+                    totalHeight += heroHeight;
+                    totalHeroes++;
+                }
             }
-            let average = totalHeight / (team.length > 0 ? team.length : 1);
+            let average = totalHeight / (totalHeroes > 0 ? totalHeroes : 1);
             setAverageHeight(average);
         }
 
         function updateAverageWeight() {
             let totalWeight = 0;
+            let totalHeroes = 0;
             for (let hero of team) {
-                totalWeight += parseInt(hero.appearance.weight[1].split(" ")[0]);
+                let heroWeight = parseInt(hero.appearance.weight[1].split(" ")[0]);
+                if(!isNaN(heroWeight) && heroWeight > 0) {
+                    totalWeight += heroWeight;
+                    totalHeroes++;
+                }
             }
-            let average = totalWeight / (team.length > 0 ? team.length : 1);
+            let average = totalWeight / (totalHeroes > 0 ? totalHeroes : 1);
             setAverageWeight(average);
         }
 
         updatePowerstats();
-        updateAverageHieght();
+        updateAverageHeight();
         updateAverageWeight();
     }, [team])
 
@@ -54,8 +65,8 @@ function StatsSection({ team }) {
             <div className="w-100 mb-5">
                 <h5 className="mainText text-center my-5">POWERSTATS</h5>
                 {powerstats.map((x, num) =>
-                    <div className="w-100 my-3">
-                        <StatusBar name={`${x.name} ${num == 0 ? '(Main Skill)' : ''}`} state={x.value} max={600} key={x.num} />
+                    <div className="w-100 my-3" key={x.name} >
+                        <StatusBar name={`${x.name} ${num === 0 ? '(Main Skill)' : ''}`} state={x.value} max={600}  />
                     </div>
                 )}
             </div>

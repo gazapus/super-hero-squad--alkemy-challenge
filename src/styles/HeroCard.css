@@ -8,7 +8,6 @@
     border-color: rgba(255, 123, 0, 1);
     cursor: pointer;
     box-shadow: 1px 1px 5px rgba(255, 145, 0, 0.5), 0px 1px 5px rgba(255, 145, 0, 0.5);
-
 }
 
 .heroCard__image {
@@ -19,15 +18,46 @@
 }
 
 .heroCard__name {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.75);
     width: 100%;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
+
+.heroCard__name-good{
+    text-shadow: 1px 1px 15px black, -1px -1px 15px black;
+    background-color: rgba(0, 116, 15, 0.75);
+
+}
+
+.heroCard__name-bad {
+    text-shadow: 5px 5px 15px black, -5px -5px 15px black, 1px 1px 15px black;
+    background-color: rgba(116, 0, 0, 0.75);}
+
 .heroCard__powerstat {
     list-style: none;
     text-transform: capitalize;
     font-size: 0.9em;
+}
+
+.heroCard__closeSide {
+    width: 0;
+    height: 0;
+    border-left: 1em solid transparent;
+    border-top: 1.5em solid rgba(255, 123, 0, 0.3);
+}
+
+.heroCard__closeButton {
+    background-color: rgba(255, 123, 0, 0.3);
+}
+
+.heroCard__closeButton i:hover,
+.heroCard__closeButton:focus {
+    color: red;
+    text-shadow: 1px 1px 5px rgb(46, 46, 46);
+    font-weight: bold;
+    transition-duration: 0.3s;
+    outline: none;
 }
