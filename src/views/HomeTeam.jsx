@@ -24,22 +24,26 @@ function HomeTeam() {
 
     return (
         <div className="container-fluid p-0 homeTeam">
-            <div className="homeTeam__sub d-flex flex-column w-100 h-100" style={{ backgroundImage: `url(${BackgroundImage})` }} >
+            <div className="homeTeam__sub d-flex flex-column w-100 h-100 mb-4" style={{ backgroundImage: `url(${BackgroundImage})` }} >
                 <Navbar />
                 <div className="container">
-                    <div className="m-4">
-                        <TextBanner size="sm">My Team</TextBanner>
+                    <div className="m-3">
+                        <TextBanner size="sm">PANEL</TextBanner>
+                    </div>
+                    <div className="my-1 py-3 bg-semidark" id="search">
+                        <SearchSection />
                     </div>
                     <div className="h-100 w-100 d-flex flex-column flex-md-row p-2  bg-semidark">
                         <section className="col-12 col-md-4">
                             <StatsSection team={team} />
                         </section>
                         <section className="col-12 col-md-8 d-flex flex-wrap p-0 p-sm-2">
-                            <div className="w-100 d-flex justify-content-between p-1">
-                                <span className="text-warning fs-4">
-                                    {team.length === 6 ? 'Full Team' : team.length + "/6"}
+                            <div className="w-100 d-flex justify-content-between">
+                                <span></span>
+                                <h4 className="mainText">My Team</h4>
+                                <span className="fs-4 text-warning">
+                                    {team.length === 6 ? 'Full' : team.length + "/6"}
                                 </span>
-                                <a href="#search"><i className="bi bi-search text-light fs-5"></i></a>
                             </div>
                             {team.map((x, num) =>
                                 <HeroCard
@@ -56,9 +60,6 @@ function HomeTeam() {
                                 </h3> : ''
                             }
                         </section>
-                    </div>
-                    <div className="my-3 py-3 bg-semidark" id="search">
-                        <SearchSection />
                     </div>
                 </div>
             </div>
