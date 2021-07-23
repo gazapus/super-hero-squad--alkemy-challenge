@@ -1,6 +1,4 @@
 import '../styles/HomeTeam.css';
-import pathnames from '../utils/pathnames';
-import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import React from 'react';
 import Navbar from '../components/Navbar';
@@ -56,7 +54,7 @@ function HomeTeam() {
                                 />)}
                             {team.length === 0 ? 
                                 <h3 className="fs-2 text-warning text-center w-100 py-3" style={{fontFamily: 'Montserrat'}}>
-                                    Equipo vacío<br/>Agregué algun personaje a su equipo
+                                    Empty team<br/>Add some character to your team
                                 </h3> : ''
                             }
                         </section>

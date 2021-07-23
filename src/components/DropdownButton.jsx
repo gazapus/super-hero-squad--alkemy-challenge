@@ -9,29 +9,21 @@ function DropdownButton({ title, children }) {
     const [rightPosition, setRightPosition] = React.useState(0);
     const [buttomPosition, setButtomPosition] = React.useState(0);
 
-    function handleClick(state) {
-        setOpen(state);
-    }
-
-    React.useLayoutEffect(() => {
+    React.useEffect(() => {
         function handleResize() {
-            let bottom = buttonRef.current.getBoundingClientRect().bottom;
-            let left = buttonRef.current.getBoundingClientRect().left;
-            let right = buttonRef.current.getBoundingClientRect().right;
-            let top = buttonRef.current.getBoundingClientRect().top;
-            setTopPosition(top);
-            setButtomPosition(bottom);
-            setRightPosition(right);
-            setLeftPosition(left);
+            setTopPosition(buttonRef.current.getBoundingClientRect().top);
+            setButtomPosition(buttonRef.current.getBoundingClientRect().bottom);
+            setRightPosition(buttonRef.current.getBoundingClientRect().right);
+            setLeftPosition(buttonRef.current.getBoundingClientRect().left);
         }
-
         window.addEventListener("resize", handleResize);
         window.addEventListener("load", handleResize);
+        handleResize();
         return () => {
-            window.removeEventListener("resize", handleResize)
-            window.removeEventListener("load", handleResize)
+            window.removeEventListener("resize", handleResize);
+            window.removeEventListener("load", handleResize);
         };
-    }, [])
+    }, [open])
 
     React.useEffect(() => {
         function handleClickOut(e) {
@@ -43,12 +35,11 @@ function DropdownButton({ title, children }) {
         return () => {
             window.removeEventListener("click", handleClickOut)
         };
-
     }, [buttonRef, topPosition, leftPosition, buttomPosition, rightPosition])
 
     return (
         <div>
-            <button className="btn btn-outline-warning" ref={buttonRef} onClick={() => handleClick(!open)}>{title}</button>
+            <button className="btn btn-outline-warning" ref={buttonRef} onClick={() => setOpen(!open)}>{title}</button>
             <div className={`dropdown__menu flex-column ${open ? "d-flex " : "d-none"}`}
                 style={{ top: buttomPosition, left: leftPosition, minWidth: rightPosition - leftPosition }}>
                 {children}

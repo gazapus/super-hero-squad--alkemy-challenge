@@ -5,13 +5,22 @@ import '../styles/Alert.css';
 
 function Alert({ message, status }) {
 
+    React.useEffect(() => {
+        const originURL = window.location.href;
+        setInterval(() => {
+            if(originURL !== window.location.href) {
+                handleClose();
+            }
+        }, 1000)
+    }, [window.location.href]);
+
     function handleClose() {
         ReactDom.unmountComponentAtNode(document.getElementById('alert'));
     }
 
     return (
-        <div className="position-fixed top-0 w-100 d-flex justify-content-center justify-content-sm-end pt-2 " style={{ paddingRight: '0.5em' }}>
-            <div className={`_alert pt-0 px-2 d-flex flex-column col-11 col-sm-8 col-md-6 col-lg-5 _alert-${status}`}>
+        <div className="position-fixed top-0 pt-2 _alertContainer" style={{ paddingRight: '0.5em', right: 0 }}>
+            <div className={`_alert pt-0 px-2 d-flex flex-column _alert-${status} w-100`}>
                 <div className="d-flex justify-content-end">
                     <button className="border-0 p-0 m-0 bg-transparent" onClick={handleClose}>
                         <i className="bi bi-x-square-fill fs-5"></i>
@@ -24,6 +33,7 @@ function Alert({ message, status }) {
 }
 
 function launchAlert(message, status) {
+    ReactDom.unmountComponentAtNode(document.getElementById('alert'));
     ReactDom.render(<Alert message={message} status={status} />, document.getElementById('alert'));
 }
 

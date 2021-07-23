@@ -35,7 +35,7 @@ function CardResult({ name, image, handleClick, selected = false, isGood = true 
             <button className={`cardResult d-flex flex-column align-items-center border px-0 py-3 w-100 border-dark bg-semidark
                 ${isGood ? 'cardResult-good' : 'cardResult-bad'}`}
                 ref={cardRef} disabled={selected} onClick={handleClick}
-                data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al equipo"
+                data-bs-toggle="tooltip" data-bs-placement="top" title="Add to my team"
             >
                 <div className={`cardResult__image border border-dark rounded-circle w-75 d-flex justify-content-center align-items-center`}
                     style={{ height: `${cardWidth * 0.75}px`, backgroundImage: "url('" + image + "')" }}>

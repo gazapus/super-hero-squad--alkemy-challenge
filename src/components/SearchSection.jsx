@@ -21,7 +21,7 @@ function SearchSection() {
     }
 
     function addCharacter(character) {
-        if (team.find(x => x == character)) {
+        if (team.find(x => x === character)) {
             return launchAlert("Este personaje ya se encuentra en el equipo", "danger")
         }
         if (team.length === 6) {

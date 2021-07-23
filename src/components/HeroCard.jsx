@@ -22,7 +22,7 @@ function HeroCard({ name, powerstats, image, onRemove, isGood}) {
             <div className="d-flex justify-content-end ">
                 <div className="heroCard__closeSide "></div>
                 <button className="heroCard__closeButton col-6 col-sm-5 col-md-4 col-lg-3 col-xl-2 p-0 border-0" 
-                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Remover del equipo" onClick={onRemove}>
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Remove" onClick={onRemove}>
                     <i className="bi bi-x-lg"></i>
                 </button>
             </div>

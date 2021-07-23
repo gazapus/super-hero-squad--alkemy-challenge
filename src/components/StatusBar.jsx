@@ -1,7 +1,6 @@
 import '../styles/StatusBar.css';
 
 function StatusBar({ name = "", state = 0, max = 100, small }) {
-    const stateValue = state !== "null"
     return (
         <div className="statusBar d-flex flex-column w-100 px-1 my-2">
             <p className={`statusBar__name p-0 m-0 text-start text-light ${small ? 'statusBar__name-small' : ''} `}>{name}</p>
