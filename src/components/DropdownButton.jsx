@@ -44,7 +44,7 @@ function DropdownButton({ title, children }) {
             window.removeEventListener("click", handleClickOut)
         };
 
-    }, [buttonRef, topPosition, leftPosition])
+    }, [buttonRef, topPosition, leftPosition, buttomPosition, rightPosition])
 
     return (
         <div>

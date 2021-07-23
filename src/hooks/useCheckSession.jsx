@@ -14,7 +14,7 @@ function useCheckSession() {
         window.addEventListener('popstate', checkSession);
         checkSession();
         return () => window.removeEventListener('popstate', checkSession);
-    }, []);
+    }, [history]);
 
     return;
 }

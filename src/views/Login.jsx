@@ -16,8 +16,8 @@ function Login() {
     const history = useHistory();
     
     React.useEffect(() => {
-        if(AuthService.getToken()) history.push(pathnames.home);
-    }, [])
+        if(AuthService.getToken()) history.push(pathnames.team);
+    }, [history])
 
     async function handleSubmit(values) {
         setLoading(true);
@@ -26,7 +26,7 @@ function Login() {
         if (error) {
             alertar("ERROR: Usuario o contraseña no válido", "danger");
         } else {
-            history.push(pathnames.home);
+            history.push(pathnames.team);
         }
     }
 
