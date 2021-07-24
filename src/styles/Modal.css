@@ -1,0 +1,54 @@
+.Modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.623);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Modal__content {
+    max-width: 90%;
+    max-height: 95%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    .Modal__content {
+        max-width: 95%;
+    }
+}
+
+/* width */
+
+.Modal__content::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+
+.Modal__content::-webkit-scrollbar-track {
+    background: #111111;
+}
+
+/* Handle */
+
+.Modal__content::-webkit-scrollbar-thumb {
+    background: rgb(88, 88, 88);
+}
+
+/* Handle on hover */
+
+.Modal__content::-webkit-scrollbar-thumb:hover {
+    background: rgb(49, 49, 49);
+}

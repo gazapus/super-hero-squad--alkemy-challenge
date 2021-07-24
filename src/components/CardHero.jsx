@@ -2,11 +2,11 @@ import '../styles/CardHero.css';
 import StatusBar from './StatusBar';
 import React from 'react';
 
-function HeroCard({ name, powerstats, image, onRemove, isGood}) {
+function HeroCard({ name, powerstats, image, onRemove, isGood, handleClick}) {
 
     return (
         <div className="p-0 p-sm-1 col-6 col-lg-4 border-0" >
-            <button className={`heroCard d-flex flex-column p-1 col-12 bg-transparent`}>
+            <button className={`heroCard d-flex flex-column p-1 col-12 bg-transparent`} onClick={handleClick}>
                 <div className="heroCard__image d-flex justify-content-center align-items-end" style={{ backgroundImage: "url('" + image + "')" }} >
                     <span className={`text-light text-center p-1 heroCard__name ${isGood ? 'heroCard__name-good' : 'heroCard__name-bad'}`}>{name}</span>
                 </div>
