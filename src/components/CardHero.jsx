@@ -1,5 +1,5 @@
-import '../styles/HeroCard.css';
-import StatusBar from '../components/StatusBar';
+import '../styles/CardHero.css';
+import StatusBar from './StatusBar';
 import React from 'react';
 
 function HeroCard({ name, powerstats, image, onRemove, isGood}) {

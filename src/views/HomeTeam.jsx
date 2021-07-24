@@ -3,9 +3,9 @@ import Footer from '../components/Footer';
 import React from 'react';
 import Navbar from '../components/Navbar';
 import BackgroundImage from '../images/dots.png';
-import HeroCard from '../components/HeroCard';
-import StatsSection from '../components/StatsSection';
-import SearchSection from '../components/SearchSection';
+import CardHero from '../components/CardHero';
+import SectionStat from '../components/SectionStat';
+import SectionSearch from '../components/SectionSearch';
 import TextBanner from "../components/TextBanner";
 import useCheckSession from "../hooks/useCheckSession";
 import Provider, { useAppContext } from '../Provider';
@@ -29,11 +29,11 @@ function HomeTeam() {
                         <TextBanner size="sm">PANEL</TextBanner>
                     </div>
                     <div className="my-1 py-3 bg-semidark" id="search">
-                        <SearchSection />
+                        <SectionSearch />
                     </div>
                     <div className="h-100 w-100 d-flex flex-column flex-md-row p-2  bg-semidark">
                         <section className="col-12 col-md-4">
-                            <StatsSection team={team} />
+                            <SectionStat team={team} />
                         </section>
                         <section className="col-12 col-md-8 d-flex flex-wrap p-0 p-sm-2">
                             <div className="w-100 d-flex justify-content-between">
@@ -44,7 +44,7 @@ function HomeTeam() {
                                 </span>
                             </div>
                             {team.map((x, num) =>
-                                <HeroCard
+                                <CardHero
                                     name={x.name}
                                     powerstats={x.powerstats}
                                     image={x.image.url}

@@ -1,8 +1,8 @@
 const Paths = {
     home: '/',
     login: '/login',
-    search: '/search',
-    team: '/team'
+    team: '/team',
+    detail: '/detail/:id'
 }
 
 export default Paths;

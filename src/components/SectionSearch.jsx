@@ -1,6 +1,6 @@
-import SearcherForm from '../components/SearcherForm';
-import CardResult from '../components/CardResult';
-import launchAlert from '../components/Alert';
+import FormSearch from './FormSearch';
+import CardResult from './CardResult';
+import launchAlert from './Alert';
 import heroesService from '../services/heroes.service';
 import React, { useState } from 'react';
 import { useAppContext } from '../Provider';
@@ -22,24 +22,24 @@ function SearchSection() {
 
     function addCharacter(character) {
         if (team.find(x => x === character)) {
-            return launchAlert("Este personaje ya se encuentra en el equipo", "danger")
+            return launchAlert("This character is already on the team", "danger")
         }
         if (team.length === 6) {
-            return launchAlert("El equipo ya está completo", "danger");
+            return launchAlert("The team is already complete", "danger");
         }
         let orientationCharacter = character.biography.alignment;
         if (team.filter(x => x.biography.alignment === orientationCharacter).length === 3) {
             return launchAlert(`The ${orientationCharacter} members are already complete`, "danger");
         }
         let currentTeam = [...team];
-        currentTeam.push(character);
+        currentTeam.unshift(character);
         setTeam(currentTeam);
     }
 
     return (
         <div className="">
             <div className="my-1 mb-1 d-flex flex-column">
-                <SearcherForm handleSubmit={searchHero} loading={loading} />
+                <FormSearch handleSubmit={searchHero} loading={loading} />
                 <div className="d-flex justify-content-center">
                     {loading ?
                         <div className="spinner-border text-warning text-center" role="status">

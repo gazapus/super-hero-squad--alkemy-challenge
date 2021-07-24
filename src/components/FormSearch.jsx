@@ -1,4 +1,4 @@
-import '../styles/SearcherForm.css';
+import '../styles/FormSearch.css';
 import { useFormik } from 'formik';
 
 function Searcher({ handleSubmit = () => { } }) {
