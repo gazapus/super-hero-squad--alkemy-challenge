@@ -1,5 +1,6 @@
 import StatusBar from '../components/StatusBar';
 import InfoBox from '../components/InfoBox';
+import TextMain from '../components/TextMain';
 import React from 'react';
 
 function StatsSection({ team }) {
@@ -63,7 +64,7 @@ function StatsSection({ team }) {
     return (
         <div className="w-100">
             <div className="w-100 mb-5">
-                <h5 className="mainText text-center my-5">POWERSTATS</h5>
+                <TextMain>POWERSTATS</TextMain>
                 {powerstats.map((x, num) =>
                     <div className="w-100 my-3" key={x.name} >
                         <StatusBar name={`${x.name} ${num === 0 ? '(Main Skill)' : ''}`} state={x.value} max={600}  />

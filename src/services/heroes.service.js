@@ -12,13 +12,12 @@ async function search(name) {
 };
 
 async function get(id) {
-    return axios.get("https://www.superheroapi.com/api.php/id/" + id)
+    return axios.get("https://www.superheroapi.com/api.php/3282090465183136/" + id)
         .then((response) => {
-            console.log(response)
-            return false;
+            return response.data;
         })
         .catch((error) => {
-            return true;
+            alert(error);
         });
 };
 

@@ -27,15 +27,7 @@ body {
   background: rgb(150, 150, 150);
 }
 
-
 .bg-semidark {
   background-color: rgba(40, 40, 40, 0.3);
 }
 
-.mainText {
-  color: yellow;
-  font-size: 2em;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  text-shadow: 1px 1px 5px red;
-}

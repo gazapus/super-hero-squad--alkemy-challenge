@@ -1,0 +1,7 @@
+.textMain {
+    color: yellow;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px red;
+}
