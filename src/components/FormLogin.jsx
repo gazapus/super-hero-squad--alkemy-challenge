@@ -3,6 +3,12 @@ import Validators from '../utils/validators';
 import Button from './Button';
 import '../styles/FormLogin.css';
 
+/** 
+ * Form of login with email and password
+ * @constructor
+ * @prop {function} handleSubmit - action form function
+ * @prop {boolean} loading - loading state
+ */
 function FormLogin({ handleSubmit, loading = false }) {
     const formik = useFormik({
         initialValues: {
@@ -15,8 +21,8 @@ function FormLogin({ handleSubmit, loading = false }) {
         },
         validate: values => {
             let errors = {};
-            if (!Validators.validateEmail(values.email)) errors.email = "Dirección de email invalida";
-            if (values.password.length < 4 || values.password.length > 20) errors.password = "Password inválido";
+            if (!Validators.validateEmail(values.email)) errors.email = "Invalid email address";
+            if (values.password.length < 4 || values.password.length > 20) errors.password = "Invalid password";
             return errors;
         },
         validateOnChange: false,
@@ -28,9 +34,9 @@ function FormLogin({ handleSubmit, loading = false }) {
             <form onSubmit={formik.handleSubmit}
                 className="formLogin d-flex flex-column align-items-center col-11 col-sm-8 col-md-6 col-lg-5 col-xl-4 px-3 py-3 mb-3">
                 <div className="d-flex flex-column col-12 col-sm-10 col-md-10">
-                    <h3 className="formLogin__title fw-bold my-3">INICIAR SESIÓN</h3>
+                    <h3 className="formLogin__title fw-bold my-3">Welcome</h3>
 
-                    <label htmlFor="email" className="mt-3 formLogin__label">Correo electrónico:</label>
+                    <label htmlFor="email" className="mt-3 formLogin__label">Email:</label>
                     <input
                         id="email"
                         name="email"
@@ -66,11 +72,11 @@ function FormLogin({ handleSubmit, loading = false }) {
                             onChange={formik.handleChange}
                             value={true}
                         />
-                        <label htmlFor="keepLogged" className="text-light">&nbsp; Mantener sesión abierta</label>
+                        <label htmlFor="keepLogged" className="text-light">&nbsp; Keep session open</label>
                     </div>
 
                     <div className="d-flex justify-content-center">
-                        <Button type="submit" disabled={loading}>Entrar</Button>
+                        <Button type="submit" disabled={loading}>Log In</Button>
                     </div>
                     <div className="text-center mt-2" style={{height: "2em"}}>
                         {loading ?

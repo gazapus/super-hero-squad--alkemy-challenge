@@ -2,7 +2,9 @@ import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import authService from '../services/auth.service';
 import pathnames from '../utils/pathnames';
+
 /** 
+ * Check that the user is logged in, if he is not, it redirects him to the login
  */
 function useCheckSession() {
     const history = useHistory();

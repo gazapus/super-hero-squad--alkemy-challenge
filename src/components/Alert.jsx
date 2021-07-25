@@ -3,6 +3,12 @@ import React from 'react';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import '../styles/Alert.css';
 
+/** 
+ * Represents a function that calls an alert popup
+ * @constructor
+ * @prop {string} message - message to show
+ * @prop {string} status - alert level. Can be: default, danger or success
+ */
 function Alert({ message, status }) {
 
     React.useEffect(() => {
@@ -32,6 +38,12 @@ function Alert({ message, status }) {
     )
 }
 
+/** 
+ * Function that calls the Alert component
+ * @constructor
+ * @prop {string} message - message to show
+ * @prop {string} status - alert level. Can be: default, danger or success
+ */
 function launchAlert(message, status) {
     ReactDom.unmountComponentAtNode(document.getElementById('alert'));
     ReactDom.render(<Alert message={message} status={status} />, document.getElementById('alert'));

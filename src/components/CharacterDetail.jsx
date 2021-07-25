@@ -1,6 +1,12 @@
 import '../styles/CharacterDetail.css';
 import TextMain from './TextMain';
 
+/** 
+ * Feature detail 
+ * @constructor
+ * @prop {string} name - feature name
+ * @prop {string} value - feature value
+ */
 function Feature({ name, value }) {
     return (
         <div className="d-flex w-100">
@@ -10,6 +16,12 @@ function Feature({ name, value }) {
     )
 }
 
+/** 
+ * Character detail to show in modal body
+ * @constructor
+ * @prop {object} character - character object
+ * @prop {function} onClose - function to call in action
+ */
 function CharacterDetail({ character, onClose }) {
     if (!character) return <></>
     return (

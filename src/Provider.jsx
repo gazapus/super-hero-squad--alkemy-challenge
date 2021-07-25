@@ -3,7 +3,6 @@ const AppContext = React.createContext();
 
 function Provider(props) {
     const [team, setTeam] = React.useState([]);
-
     return(
         <AppContext.Provider value={{team, setTeam }} {...props}/>
     )

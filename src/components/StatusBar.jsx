@@ -1,5 +1,13 @@
 import '../styles/StatusBar.css';
 
+/** 
+ * Status bar of a character's ability
+ * @constructor
+ * @prop {string} name - ability name
+ * @prop {number} state - value ability state
+ * @prop {number} max - max posible ability value
+ * @prop {boolean} small - small bar ?
+ */
 function StatusBar({ name = "", state = 0, max = 100, small }) {
     return (
         <div className="statusBar d-flex flex-column w-100 px-1 my-2">

@@ -1,7 +1,12 @@
 import '../styles/FormSearch.css';
 import { useFormik } from 'formik';
 
-function Searcher({ handleSubmit = () => { } }) {
+/** 
+ * Form of character search
+ * @constructor
+ * @prop {function} handleSubmit - action form function
+ */
+function FormSearch({ handleSubmit = () => { } }) {
     const formik = useFormik({
         initialValues: {
             name: ''
@@ -42,4 +47,4 @@ function Searcher({ handleSubmit = () => { } }) {
     )
 }
 
-export default Searcher;
+export default FormSearch;

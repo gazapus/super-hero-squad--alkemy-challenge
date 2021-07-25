@@ -1,4 +1,4 @@
-import './Login.css'
+import '../styles/Login.css'
 import React from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import usePageHeight from '../hooks/usePageHeight';
@@ -6,7 +6,7 @@ import pathnames from '../utils/pathnames';
 import AuthService from '../services/auth.service';
 import TextBanner from '../components/TextBanner';
 import Footer from '../components/Footer';
-import HomeBackground from '../components/HomeBackground';
+import BackgroundHome from '../components/BackgroundHome';
 import FormLogin from '../components/FormLogin';
 import alertar from '../components/Alert';
 
@@ -32,7 +32,7 @@ function Login() {
 
     return (
         <div className="cc container-fluid p-0" >
-            <HomeBackground />
+            <BackgroundHome />
             <div className="login__background"></div>
             <div className="login d-flex flex-column w-100 align-items-center">
                 <div className="mt-3 mb-0">

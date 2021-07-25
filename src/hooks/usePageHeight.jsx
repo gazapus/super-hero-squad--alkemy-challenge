@@ -1,6 +1,7 @@
 import { useLayoutEffect, useState } from 'react';
 
 /** 
+ * return current page height
  */
 function usePageHeight() {
     const [height, setHeight] = useState(0);

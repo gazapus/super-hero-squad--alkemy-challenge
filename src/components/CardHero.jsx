@@ -2,6 +2,16 @@ import '../styles/CardHero.css';
 import StatusBar from './StatusBar';
 import React from 'react';
 
+/** 
+ * Card Hero that contains name, image and more info 
+ * @constructor
+ * @prop {string} name - character name
+ * @prop {array} powerstats - object array of character powerstats
+ * @prop {string} image - character image url
+ * @prop {function} onRemove - function to call when the close button is pressed
+ * @prop {boolean} isGood - character alignament
+ * @prop {function} handleClick - function to call when the card is pressed
+ */
 function HeroCard({ name, powerstats, image, onRemove, isGood, handleClick}) {
 
     return (

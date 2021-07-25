@@ -1,6 +1,12 @@
 import '../styles/DropdownButton.css';
 import React from 'react';
 
+/** 
+ * Dropdown button
+ * @constructor
+ * @prop {function} title - button name
+ * @prop {children}
+ */
 function DropdownButton({ title, children }) {
     const buttonRef = React.useRef();
     const [open, setOpen] = React.useState(false);

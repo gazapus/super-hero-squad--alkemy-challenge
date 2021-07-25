@@ -2,9 +2,14 @@ import StatusBar from '../components/StatusBar';
 import InfoBox from '../components/InfoBox';
 import TextMain from '../components/TextMain';
 import React from 'react';
+import { useAppContext } from '../Provider';
 
-function StatsSection({ team }) {
+/** 
+ * Section Team stats of home page
+ */
+function StatsSection() {
     const [powerstats, setPowerstats] = React.useState([]);
+    const { team, setTeam } = useAppContext();
     const [averageHeight, setAverageHeight] = React.useState(0);
     const [averageWeight, setAverageWeight] = React.useState(0);
 

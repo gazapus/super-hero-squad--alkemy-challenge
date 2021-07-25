@@ -5,6 +5,9 @@ import heroesService from '../services/heroes.service';
 import React, { useState } from 'react';
 import { useAppContext } from '../Provider';
 
+/** 
+ * Section Search of home page
+ */
 function SearchSection() {
     const [results, setResults] = React.useState([]);
     const [loading, setLoading] = React.useState(false);

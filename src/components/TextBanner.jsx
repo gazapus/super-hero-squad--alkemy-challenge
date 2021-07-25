@@ -1,6 +1,13 @@
 import '../styles/TextBanner.css';
 import React from 'react';
 
+/** 
+ * Big text
+ * @constructor
+ * @prop {string} size - can be sm lg or md
+ * @prop {boolean} neonEffect - shadow effect of text
+ * @prop {chidlren} - text to show
+ */
 function TextBanner({ children, size = "md", neonEffect = false }) {
     const [classSize, setClassSize] = React.useState("md");
 

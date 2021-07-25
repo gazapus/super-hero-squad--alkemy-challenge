@@ -5,7 +5,9 @@ import pathnames from '../utils/pathnames';
 import '../styles/Navbar.css';
 import AuthService from '../services/auth.service';
 
-
+/** 
+ * Navigation bar app. Contain page home and user button
+ */
 function Navbar() {
     const history = useHistory();
 
