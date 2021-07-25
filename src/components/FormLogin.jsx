@@ -61,6 +61,7 @@ function FormLogin({ handleSubmit, loading = false }) {
                         maxLength={20}
                         minLength={4}
                         className="formLogin__input px-2"
+                        autoComplete="on"
                     />
                     <span className="formLogin__error text-danger">{formik.errors.password}&nbsp;</span>
 
