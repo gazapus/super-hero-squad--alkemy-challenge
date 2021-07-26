@@ -13,12 +13,17 @@ function Alert({ message, status }) {
 
     React.useEffect(() => {
         const originURL = window.location.href;
-        setInterval(() => {
-            if(originURL !== window.location.href) {
+        function checkURL() {
+            if (originURL !== window.location.href) {
+                clearInterval(interval)
                 handleClose();
             }
-        }, 1000)
-    }, [window.location.href]);
+        }
+        let interval = setInterval(checkURL , 1000)
+        return () => {
+            clearInterval(interval)
+        }
+    }, []);
 
     function handleClose() {
         ReactDom.unmountComponentAtNode(document.getElementById('alert'));

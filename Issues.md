@@ -8,3 +8,6 @@
 
 - 3: 
 * El DropdownButton no responde al primer click sino al segundo, esto sucede solo la primera vez que se lo usa.
+
+- 4: Solucionado
+ * El componente Alert desaparece en un segundo tras haber sido llamada por segunda vez en una página distinta a la inicial
