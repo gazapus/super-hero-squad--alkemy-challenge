@@ -30,7 +30,7 @@ function CharacterDetail({ character, onClose }) {
                 <span>.</span>
                 <TextMain>{character.name}</TextMain>
                 <button className="bg-transparent border-0" onClick={onClose}>
-                    <i class="bi bi-x-square fs-3 text-danger"></i>
+                    <i className="bi bi-x-square fs-3 text-danger"></i>
                 </button>
             </div>
             <div className={`character__imageContainer character__imageContainer-${character.biography.alignment} rounded`}>

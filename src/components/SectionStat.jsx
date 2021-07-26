@@ -9,7 +9,7 @@ import { useAppContext } from '../Provider';
  */
 function StatsSection() {
     const [powerstats, setPowerstats] = React.useState([]);
-    const { team, setTeam } = useAppContext();
+    const { team } = useAppContext();
     const [averageHeight, setAverageHeight] = React.useState(0);
     const [averageWeight, setAverageWeight] = React.useState(0);
 
