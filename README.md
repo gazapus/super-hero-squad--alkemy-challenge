@@ -2,6 +2,8 @@
 
 Sitio web desarrollado con React sobre la creación de un equipo de super heroes y villanos. Permite loguearse, buscar personajes e interactuar.
 
+[Visitar sitio web desplegado](https://heroes-challenge.web.app/)
+
 ### Vista Previa
 
 ![Captura](https://i.ibb.co/bv76KNj/background.png)
@@ -40,6 +42,9 @@ Accede al puerto [3000](http://localhost:3000) para ver el sitio web corriendo d
 
 - Cristian Villafañe
 
---- 
+### Proximos pasos:
+ - Test
+ - Persistencia de datos
+ - Completar documentación
 
-_La documentacion de este proyecto está desarrollandose_
+ --- 
