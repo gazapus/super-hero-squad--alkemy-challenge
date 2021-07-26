@@ -22,7 +22,7 @@ function Navbar() {
                 <Link to={pathnames.home} style={{ textDecoration: 'none' }}>
                     <TextBanner size="sm" neonEffect>SUPER HERO <span className="navbar__br"></span> SQUAD</TextBanner>
                 </Link>
-                <DropdownButton title="Usuario">
+                <DropdownButton title="User">
                     <button className="btn text-light border-bottom" onClick={logout}>Salir</button>    
                 </DropdownButton>
             </div>

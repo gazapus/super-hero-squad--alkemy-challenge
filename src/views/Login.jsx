@@ -24,7 +24,7 @@ function Login() {
         let error = await AuthService.signin(values.email, values.password, values.keepLogged);
         setLoading(false);
         if (error) {
-            alertar("ERROR: Usuario o contraseña no válido", "danger");
+            alertar("ERROR: Invalid user or password", "danger");
         } else {
             history.push(pathnames.team);
         }
